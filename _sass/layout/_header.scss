@@ -1,0 +1,60 @@
+/**
+ * Header
+ */
+
+.header--full {
+    width: 100%;
+    min-height: 10rem;
+    background: whitesmoke;
+    margin-bottom: 5rem;
+    text-align: center;
+    box-shadow: 0 -4px 14px rgba(0,0,0,.1) inset;
+}
+
+.header__logo {
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    width: 6em;
+    margin-top: 2rem;
+    height: 6em;
+    padding: 0 1rem 1rem 1rem;
+    box-shadow: 0 1px 0 white;
+    transition: all .1s ease-in-out;
+
+    &:before {
+        color: #ccc;
+        position: relative;
+        content: "&";
+        font-size: 4rem;
+        font-family: Georgia, serif;
+        text-shadow: 1px 1px 0 white;
+        transition: all .2s ease-in-out;
+        transform: rotateY(380deg);
+    }
+
+    &:after {
+        content: "HOME";
+        left: 1.4em;
+        top: 5em;
+        position: absolute;
+        opacity: 0;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+        text-decoration: none;
+        border: 3px solid #aaa;
+
+        &:before {
+            color: #aaa;
+            opacity: 0;
+        }
+
+        &:after {
+            opacity: 1;
+            top: 2.2rem;
+            font-family: $text-secondary-stack;
+        }
+    }
+}

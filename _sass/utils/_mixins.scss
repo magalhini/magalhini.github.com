@@ -1,0 +1,80 @@
+@mixin pseudo-overlay() {
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+@mixin clearfix() {
+    content: "";
+    display: table;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+/**
+ * animation mixin.
+ * @usage:
+ *     @include animation(name 1s ease-in-out alternate infinite);
+ *
+ * @param  {[type]} $animate... [description]
+ * @return {[type]}             [description]
+ */
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    animation:         $animations;
+}
+
+/**
+ * @keyframes mixin
+ * @usage
+ *     @include keyframes(name)
+ * @param  {[type]} $animationName [description]
+ * @return {[type]}                [description]
+ */
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

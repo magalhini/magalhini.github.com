@@ -1,0 +1,13 @@
+{
+    "uglify-js-arguments": [
+        "-o"
+    ],
+    "scripts": [
+        "js/src/helpers.js",
+        "js/src/header-nav.js",
+        "js/src/scroll-top.js",
+        "js/main.js"
+    ],
+
+    "minifiedFilename": "js/main.min.js"
+}

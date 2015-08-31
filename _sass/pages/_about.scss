@@ -1,0 +1,15 @@
+.about {
+    @include grid-column( $columns: 11, $center: true );
+    @extend %a-el-in;
+    
+    display: none;
+    padding-top: 2.5rem;
+
+    @media #{$medium-up} {
+      @include grid-column( $columns: 9, $center: true );
+    }
+
+    @media #{$large-up} {
+      @include grid-column( $columns: 7, $offset: 4, $center: false );
+    }
+}

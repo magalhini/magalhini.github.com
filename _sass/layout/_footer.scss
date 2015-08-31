@@ -1,0 +1,46 @@
+.blog-footer {
+    background: whitesmoke;
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) inset;
+
+    @media #{$medium-up} {
+        padding: 3rem 10rem;
+    }
+}
+
+    // Variant of the footer for the HOMEPAGE
+    .blog-footer--home {
+        @include grid-column(
+            $columns: 12);
+
+        @media #{$large-up} {
+            @include grid-column(
+                $offset: 3,
+                $columns: 9);
+        }
+
+        box-shadow: none;
+    }
+
+.footer {
+    @media #{$large-up} {
+        @include grid-column(
+        $collapse: true,
+        $center: true);
+    }
+}
+
+.footer {
+    .author-info {
+        text-align: center;
+    }
+
+    .author-info__bio {
+        font-size: 1em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+// Small navigation on top on the posts list.
+.posts-header {
+  padding-top: 5.5rem;
+
+  @include grid-column( $columns: 11, $center: true, $collapse: false );
+
+  @media #{$medium-up} {
+      @include grid-column( $columns: 9, $center: true, $collapse: false );
+  }
+
+  @media #{$large-up} {
+    @include grid-column( $columns: 7, $offset: 4, $center: false);
+  }
+}
+
+.posts-header__inner {
+  border-bottom: 2px solid rgb(60, 60, 60);
+  overflow: hidden;
+}
+
+// The main list of posts
+.posts-list {
+  padding-top: 3.6rem;
+  overflow: hidden;
+
+  @include grid-column( $columns: 12, $center: true );
+
+  @media #{$medium-up} {
+    @include grid-column( $columns: 9, $center: true );
+  }
+
+  @media #{$large-up} {
+    @include grid-column( $columns: 7, $offset: 4, $center: false );
+  }
+}
+
+.posts-header__title {
+  background-color: rgba(0, 0, 0, .1);
+  font-family: $text-secondary-stack;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  float: left;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+    background: #d8cf65;
+    color: white;
+  }
+
+  &.is-selected {
+    background: #b1b1b1;
+
+    // Default is yellow, which contrasts with the background.
+    &:hover {
+      color: white;
+    }
+  }
+}

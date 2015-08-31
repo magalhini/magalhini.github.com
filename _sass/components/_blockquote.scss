@@ -1,0 +1,45 @@
+blockquote {
+
+  font-style: italic;
+  margin: 3rem 0;
+  text-align: center;
+
+  &:before,
+  &:after {
+    content: "";
+    font-size: 2em;
+    position: absolute;
+    border-top: 1px solid #cecece;
+    left: 40%;
+    width: 20%;
+  }
+
+  p {
+    color: #000;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 2em;
+    position: relative;
+
+    &:hover:before {
+        left: -4.5rem;
+        opacity: .2;
+    }
+
+    &:before {
+        content: "\201C";
+        position: absolute;
+        left: -4rem;
+        font-size: 4em;
+        top: -4rem;
+        font-style: normal;
+        opacity: .1;
+        transition: all .2s ease-in-out 0s;
+    }
+  }
+}
+
+blockquote footer {
+  color: #7a7a7a;
+  padding: 1rem 1rem 1.5rem;
+}

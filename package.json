@@ -1,0 +1,26 @@
+{
+  "name": "writer",
+  "version": "1.0.0",
+  "description": "Ricardo Magalhaes Blog Jekyll theme",
+  "main": "js/main.js",
+  "dependencies": {
+    "uglify-js": "^2.4.24"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.24"
+  },
+  "scripts": {
+    "start": "uglifyjs-watcher minify.json & jekyll serve --baseurl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:magalhini/magalhini.github.com.git"
+  },
+  "author": "Ricardo Magalhaes <magalhini@gmail.com> (www.ricardofilipe.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

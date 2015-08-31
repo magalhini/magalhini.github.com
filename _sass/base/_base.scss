@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: $color-body-background;
+}
+
+a {
+  color: $color-regular-link;
+  transition: 0.15s;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+
+  &:active,
+  &:hover {
+    color: $color-regular-link;
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80vh;
+  margin: 0 auto;
+}

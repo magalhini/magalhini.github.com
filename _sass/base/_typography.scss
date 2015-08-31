@@ -1,0 +1,90 @@
+html {
+  font-size: 1em;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $text-primary-stack;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+}
+
+p,
+ul,
+ol,
+span {
+  font-size: 1.12rem;
+  margin-bottom: 1.5rem;
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+
+  @media #{$medium-up} {
+    font-size: 1.3rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $text-secondary-stack;
+  margin: 1.5rem 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.157em;
+  
+  @media #{$medium-up} {
+    font-size: 3.157em;
+  }
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+  line-height: 1.5;
+  margin-bottom: 1.9rem;
+}
+
+.main-article-title {
+  @extend %a-el-in;
+  margin-top: 0;
+  text-align: center;
+  font-weight: 400;
+
+  @media #{$large-up} {
+    margin-bottom: 0;
+  }
+}
+
+h5,
+.title-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+.highlight {
+  margin-bottom: 1.5rem;
+}
+
+// Making strikeouts less agressive on the eye
+del {
+  opacity: 0.4;
+}

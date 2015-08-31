@@ -1,0 +1,138 @@
+// Aside (sidebar)
+// On the main post lists, where it should become a header
+// on smaller screens.
+.aside-content {
+
+  @include grid-column(12);
+
+  background: whitesmoke;
+  box-shadow: 0 0 10px rgba(50, 50, 50, .15) inset;
+  border-right: 1px solid rgba(50, 50, 50, .1);
+  max-height: 350px;
+  height: 350px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  text-align: center;
+
+  // The ampersand, hide on small, display on medium and up
+  &:before {
+    content: none;
+
+    @media #{$medium-up} {
+        border: 3px solid #ccc;
+        border-radius: 50%;
+        box-shadow: 0 1px 0 white;
+        color: #ccc;
+        position: relative;
+        content: "&";
+        font-size: 4rem;
+        padding: .5rem 1.5rem;
+        top: 2rem;
+        font-family: Georgia, serif;
+        text-shadow: 1px 1px 0 white;
+    }
+
+    @media #{$large-up} {
+        top: 5rem;
+        padding: 0 1.6rem 0 1.5rem;
+        line-height: 1;
+        font-size: 7rem;
+    }
+  }
+
+  @media #{$large-up} {
+    @include grid-column(3);
+    background-position: 90%;
+    height: 100%;
+    max-height: 100%;
+    position: fixed !important;
+  }
+}
+
+// Small bio section on the sidebar
+.aside-bio {
+  font-family: $text-secondary-stack;
+
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+  padding: 1% 8% 0;
+
+  @media#{$large-up} {
+    margin-top: 10rem;
+    padding: 0 8%;
+  }
+}
+
+.aside__author {
+    font-size: 2rem;
+
+    @media#{$medium-up} {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+}
+
+.aside__description {
+  font-size: 1rem;
+}
+
+.aside-blog-title {
+  text-indent: -100%;
+  font-size: 0;
+
+  @media#{$medium-up} {
+      margin: .5em;
+  }
+}
+
+// Social links on the sidebar
+.aside-social {
+    text-align: center;
+
+    @media#{$large-up} {
+        margin-top: 3rem;
+    }
+}
+
+.aside-social__icon {
+    display: inline-block;
+    margin-right: 1rem;
+    position: relative;
+
+    &:after {
+        content: attr(data-link);
+        opacity: 0;
+        position: absolute;
+        transform: translateX(-60%);
+        top: -40px;
+        border-radius: 4px;
+        transition: all .2s ease-in-out;
+    }
+
+    &:hover:after {
+        opacity: 1;
+        transform: translateX(-50%);
+        background-color: #E8E8E8;
+        padding: .5rem;
+        font-size: 13px;
+    }
+
+    &:last-of-type { margin-right: 0; }
+
+    .icon {
+        width: 2rem;
+        height: 2rem;
+        color: #ccc;
+        transition: all .2s ease-in-out;
+        position: relative;
+
+        &:hover {
+            color: $color-regular-link;
+            transform: scale(1.1);
+        }
+    }
+}

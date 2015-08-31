@@ -1,0 +1,64 @@
+---
+layout: center
+---
+
+{% assign minutes = content | number_of_words | divided_by: 180 %}
+{% if minutes == 0 %}
+    {% assign minutes = 1 %}
+{% endif %}
+<span id="c-scrollTop" class="c-scroll-top is-hidden"></span>
+
+<div class="post__header">
+  <h1 class="main-article-title">{{ page.title }}</h1>
+  <div class="post__details">
+    <span class="post__item-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
+      {% if page.update_date %}
+    <span class="post__item-meta small">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span>
+      {% endif %}
+    <span class="post__item-meta small">
+      {% if page.minutes %}
+        {{ page.minutes }} minute read
+      {% else %}
+        {{ minutes }} minute read
+      {% endif %}
+    </span>
+  </div>
+</div>
+
+<article class="post__content">
+  {{ content }}
+</article>
+
+{% if site.show_sharing_icons %}
+  {% include share_buttons.html %}
+{% endif %}
+
+{% if site.disqus_shortname %}
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname  = '{{ site.disqus_shortname }}';
+    var disqus_identifier = '{{ page.id }}';
+    var disqus_title      = '{{ post.title }}';
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
+
+{% if site.show_related_posts %}
+  <aside class="related-posts" role="complementary">
+  <h3>Related Posts</h3>
+  {% for post in site.related_posts %}
+    <div class="related-posts__post">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="related-posts__link">
+        <h4 class="related-posts__title">{{ post.title }}</h4>
+        <p class="related-posts__summary">{{ post.summary }}</p>
+      </a>
+    </div>
+  {% endfor %}
+  </aside>
+{% endif %}
