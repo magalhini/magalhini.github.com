@@ -3,8 +3,8 @@ title:       Ricardo Magalhães
 email:       magalhini@gmail.com
 author:      Ricardo Magalhães
 description: "The personal and work life blog of Ricardo Magalhães"
-baseurl:     "/"
-url:         "http://magalhini.github.io"
+baseurl:     ""
+url:         "https://magalhini.github.io"
 highlighter: pygments
 timezone: Europe/Berlin
 
