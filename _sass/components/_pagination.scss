@@ -26,6 +26,12 @@
     &--disabled {
         color: #333;
         background: transparent;
+        padding: 0;
+
+        &:hover {
+            transform: none;
+            color: initial;
+        }
     }
 
     &:nth-child(2) {

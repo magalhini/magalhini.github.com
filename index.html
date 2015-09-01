@@ -3,21 +3,14 @@ layout: default
 ---
     {% for post in paginator.posts %}
       <article class="post__item">
+        <span class="post__item-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a href="{{ post.url | prepend: site.baseurl }}" class="post__item-link">
             <h4 class="post__item-title">
                 {{ post.title }}
             </h4>
         </a>
 
-        <span class="post__item-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <p class="post__item-summary">
-          {% if post.summary %}
-            {{ post.summary }}
-          {% else %}
-            {{ post.excerpt }}
-          {% endif %}
-        </p>
         {% assign post = page %}
         {% if post.tags.size > 0 %}
             {% capture tags_content %}<svg class="icon post__tag-icon"><use xlink:href="#icon-ribbon"></use></svg><span class="mls"></span>{% endcapture %}
@@ -37,6 +30,15 @@ layout: default
         {% endif %}
 
         <p class="post__item-tags">{{ tags_content }}</p>
+
+        <p class="post__item-summary">
+          {% if post.summary %}
+            {{ post.summary }}
+          {% else %}
+            {{ post.excerpt }}
+          {% endif %}
+          <a class="post__item-more" href="{{ post.url | prepend: site.baseurl }}">Keep reading</a>
+        </p>
 
       </article>
     {% endfor %}

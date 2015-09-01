@@ -20,8 +20,7 @@
 
 // The main list of posts
 .posts-list {
-  padding-top: 3.6rem;
-  overflow: hidden;
+  padding-top: 2.1em;
 
   @include grid-column( $columns: 12, $center: true );
 
