@@ -1,0 +1,13 @@
+.section {
+	position: relative;
+	padding-bottom: 1.5em;
+}
+
+.main {
+	@include grid-row();
+	display: block;
+}
+
+.container {
+	@include grid-row();
+}

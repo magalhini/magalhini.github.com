@@ -1,6 +1,17 @@
 // Aside (sidebar)
 // On the main post lists, where it should become a header
 // on smaller screens.
+
+@mixin make-shadow() {
+    $shadows: ();
+
+    @for $i from 1 through 180 {
+        $shadows: append($shadows, ($i * 1px) ($i * 1px) darken(white, $i * 0.001 * 72%), comma);
+    }
+
+    text-shadow: $shadows;
+}
+
 .aside-content {
 
   @include grid-column(12);
@@ -32,7 +43,9 @@
         padding: .5rem 1.5rem;
         top: 2rem;
         font-family: Georgia, serif;
-        text-shadow: 1px 1px 0 white;
+
+        //@include make-shadow();
+
     }
 
     @media #{$large-up} {

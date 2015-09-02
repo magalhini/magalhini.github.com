@@ -45,8 +45,8 @@ redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink: /post/:title
 exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json]
-paginate:     4
+paginate: 4
 sass:
-  compressed: true
+  style: compressed
 gems:
   - octopress-autoprefixer
