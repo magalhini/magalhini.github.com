@@ -4,22 +4,20 @@ blockquote {
   margin: 3rem 0;
   text-align: center;
 
-  &:before,
-  &:after {
-    content: "";
-    font-size: 2em;
-    position: absolute;
-    border-top: 1px solid #cecece;
-    left: 40%;
-    width: 20%;
-  }
-
   p {
     color: #000;
     display: inline-block;
     margin-bottom: 0;
     font-size: 2em;
     position: relative;
+
+    &:before,
+    &:after {
+        position: absolute;
+        font-size: 4em;
+        font-style: normal;
+        transition: all .2s ease-in-out 0s;
+    }
 
     &:hover:before {
         left: -4.5rem;
@@ -28,13 +26,16 @@ blockquote {
 
     &:before {
         content: "\201C";
-        position: absolute;
         left: -4rem;
-        font-size: 4em;
         top: -4rem;
-        font-style: normal;
         opacity: .1;
-        transition: all .2s ease-in-out 0s;
+
+    }
+
+    &:after {
+        content: "”";
+        bottom: 0;
+        opacity: 0;
     }
   }
 }

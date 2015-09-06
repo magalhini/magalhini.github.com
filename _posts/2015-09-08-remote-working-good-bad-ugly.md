@@ -2,16 +2,16 @@
 layout:     post
 title:      Remote working — the Good, the Bad, the Ugly
 date:       2015-09-08 11:31:19
-summary:    Confessions and tips from an introvert working remotely. It's not such a scary world after all.
+summary:    My experiences after 1 year of working remotely. Sharing the good, the bad, the ugly.
 tags: [life]
-categories: life
+categories: Life, General
 ---
 
-## Office not required: I think.
+It’s now been close to a year since I started to work remotely, so I thought I’d finally gather my thoughts on the topic and share my experiences with the world. What I once saw only as a work perk quickly became a lifestyle that had, and still does, a tremendous impact on who I became to be.
 
-It’s now been close to a year since I started to work remotely, so I thought I’d finally gather my thoughts on the topic and share my experiences with what was once seen as a perk but it quickly became a lifestyle of its own.
+#### What this article isn't
 
-There’s already enough articles out there sharing brilliant strategies to communicate efficiently with your team, but I couldn't find much information on how to deal with the first tip of the string: yourself.
+There are already [enough](http://www.theguardian.com/money/work-blog/2014/apr/30/what-happened-to-remote-working) [articles](http://www.techrepublic.com/blog/10-things/10-good-reasons-why-working-remotely-makes-sense/) out [there](https://zapier.com/learn/the-ultimate-guide-to-remote-working/) sharing brilliant [strategies](http://www.toptal.com/freelance/how-to-work-remotely-and-still-be-the-best) on how to communicate efficiently with your team, but I couldn't find much information on how to deal with the very first tip of the remote working string: **yourself.**
 
 So this isn’t an article telling you _why you should go remote_, _why remote is the most awesome thing since avocado on toast_, or even to convince you to quit your job right now. Instead, this is a manifest of my own, confessing the highlights and the struggles I’ve had to deal with while working remotely and how I overcame some of them.
 
@@ -19,17 +19,17 @@ An introvert’s guide for remote working, too.
 
 ## Why go remote?
 
-After working right in the middle of London for more than a year, on a very impressive Piccadilly Circus’ building, I could feel the daily commute consume me. The very few days I did work from home life seemed easier and more manageable: more work was getting done, less stress, healthier habits. So one year ago I went looking for fully remote opportunities and was lucky enough to find a wonderful small creative team also based in London, GatherContent. Consumed by a will for a change, I made the jump.
+After working right in the middle of London for more than a year on a very impressive Piccadilly Circus’ building, I could feel the daily commute consume me. On the very few days I did work from home life seemed easier and more manageable: more work was getting done, less stress, healthier habits. So one year ago I went looking for fully remote opportunities and was lucky enough to find a wonderful small creative team also based in London, called GatherContent. Consumed by a will for a change, I made the jump.
 
 ![london commute](https://media.giphy.com/media/DXeea1VqF2yyY/giphy.gif)
 
 ##### Above: A typical daily commute in Central London
 
-What a hard journey it has been. Bittersweet, but I’m not ready to give this away just yet.
+An what a hard journey it has been. Bittersweet, but I’m not ready to give this away just yet.
 
 ## Disclaimer: remote is remote is remote.
 
-First of all: no two remote workers are alike. All of the _ultimate guides to remote working_ out there should be taken with a grain of salt, and by no means should you try to feel forced to adapt to someone else’s way of working. Different teams and individuals will undoubtedly have different needs, different working methodologies and possibly even distinct views on the concept of remote working itself.
+First of all: **no two remote workers are alike**. All of the _ultimate guides to remote working_ out there should be taken with a grain of salt, and by no means should you try to feel forced to adapt to someone else’s way of working. Different teams and individuals will undoubtedly have different needs, different working methodologies and possibly even distinct views on the concept of remote working itself.
 
 Given the issues that remote working can present, which I’ll come up to shortly, you should first make it very clear as to why you want to do this. Answer honestly to the question first:
 
@@ -43,18 +43,20 @@ Once you know the reasons why you’d like to make the jump to the remote workin
 
 **Remote-working becomes whatever you want it to be, but also what you let it become by itself.**
 
-This is very important. If you’re not on top of it, it easily escalates into a world of doubts, loneliness and guilt. Oh, I know, I’m loads of fun!
+Working remotely isn't a passive thing. Let it slide under the carpet and it easily escalates into a world of self-doubts, loneliness and guilt. Oh, I know, I’m loads of fun!
 
 ## Baby steps
 
-When one first starts to work from home, one of two things will happen: either you will so badly want to prove to yourself and your new team that you can nail this RW thing that you’ll work non-stop for half days straight; or… you’ll find yourself becoming too distracted by your familiar environment that you won’t get any work done.
+When you first start to work from home, one of two things will happen: either you will so badly want to prove to yourself and your new team that you can nail this lifestyle, that you’ll end up working non-stop for half-days straight; or… you’ll find yourself becoming too distracted by your familiar environment that you won’t get any work done.
 
 Luckily, it only takes a bit of discipline in order for the first one to happen, even though you’ll probably find yourself more exhausted than you’ve ever been when working from an office, at least in the first couple of weeks. This is okay, it’s a sign that you’re now able to achieve a sense of flow in your work, crucial to getting things done with high quality. However it also takes some responsibility not to let this withdraw your energy before it’s even 2pm.
 
-### A sane balance of flow
+### Achieve flow; with a balance
 
-You’ve heard it before from other people: “I’m so much more productive on the days I can work from home!”. This is usually very true, I won’t argue with this. But try sustaining a 7 or 8 hour sprint of work with **no breaks in between** for more than a few days, and you’ll find yourself demotivated and exhausted very quickly.
-When I first started working remotely, not seeing my team mates in person made me assume that everyone was working that very moment too, constantly, every, single, minute, taking no breaks. This made me feel very guilty if I stopped working for a twenty minute break away from the computer. In an office environment, this would be the equivalent of a water cooler conversation with your colleagues, a much needed and healthy break from work mode every few hours.
+You’ve heard it before from other people: _“I’m so much more productive on the days I can work from home!”._ This is usually very true, I won’t argue with this. But try sustaining a 7 or 8 hour sprint of work with **no breaks in between** for more than a few days and you’ll find yourself demotivated and exhausted very quickly.
+When I first started working remotely, not seeing my team mates in person made me assume that everyone was working that very moment too, constantly, every, single, minute, taking no breaks.
+
+This made me feel very guilty if I stopped working for a twenty minute break away from the computer. In an office environment, this would be the equivalent of a water cooler conversation with your colleagues, a much needed and healthy break from work mode every few hours.
 
 ### “Hey, are you there?”
 
@@ -95,7 +97,7 @@ _“Peeps, does anyone need me now? If not I’m going for a quick 30 minute run
 
 As simple as that. However it took me a long time until I realised this was something I could do without any guilt — the 9 to 5 working mode that I had had for years ruined my concept of flexibility: hey, flexible working hours represent flexible _living_ hours too.
 
-While the flexibility is great, it has to come from **wanting** to do these habits, mindfully. On the plus side, you have an opportunity to develop a great sense of health responsibility towards yourself. Taking care of your body becomes second nature; forming good habits is key while you’re on your own because suddenly you can be doing anything — and that includes doing nothing too. Red flags everywhere.
+While the flexibility is great, it has to come from **you wanting** to do these habits, mindfully. On the plus side, you have an opportunity to develop a great sense of health responsibility towards yourself. Taking care of your body becomes second nature; forming good habits is key while you’re on your own because suddenly you can be doing anything — and that includes doing nothing too. Red flags everywhere.
 
 ## It’s lonely out there
 
@@ -103,7 +105,9 @@ For me, this is the hardest part to talk about. And judging by the amount of art
 
 ![lonely](https://media.giphy.com/media/YCtwDPcQ8fV4s/giphy.gif)
 
-It doesn’t matter if you’re best friends or just acquaintances with the people from your office: having human interactivity is absolutely essential for a sane, normal life. Take that away and we’re paving the way to become working machines. Obviously, each one of us is a different story: you might be working from home with your significant other, or sharing a co-working space with other people around you that you might even have lunch with on Tuesdays. And this is fantastic! However, if you’re a single guy in a huge city where all your friends live at least forty minutes away, and on top of that you’re sharing a house with an absolutely anti-social flat mate who makes you feel miserable and angry, you might be in serious trouble after a while. And guess where I’ve taken this example from…?
+It doesn’t matter if you’re best friends or just acquaintances with the people from your office: having human interactivity is absolutely essential for a sane, normal life. Take that away and we’re paving the way to become working machines. Obviously, each one of us is a different story: you might be working from home with your significant other, or sharing a co-working space with other people around you that you might even have lunch with on Tuesdays.
+
+If so, fantastic! However, if you’re a single guy in a huge city where all your friends live at least forty minutes away, and on top of that you’re sharing a house with an absolutely anti-social flat mate who makes you feel miserable and angry, you might be in serious trouble after a while. And guess where I’ve taken this example from…?
 
 However, here’s the plus side: remote working is the ultimate opportunity for you to get to know yourself and to become comfortable with your own company.
 
