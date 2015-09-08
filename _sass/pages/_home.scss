@@ -33,7 +33,7 @@
     content: none;
 
     @media #{$medium-up} {
-        border: 3px solid #ccc;
+        /*border: 3px solid #ccc;
         border-radius: 50%;
         box-shadow: 0 1px 0 white;
         color: #ccc;
@@ -42,10 +42,7 @@
         font-size: 4rem;
         padding: .5rem 1.5rem;
         top: 2rem;
-        font-family: Georgia, serif;
-
-        //@include make-shadow();
-
+        font-family: Georgia, serif;*/
     }
 
     @media #{$large-up} {
@@ -75,7 +72,7 @@
   padding: 1% 8% 0;
 
   @media#{$large-up} {
-    margin-top: 10rem;
+    margin-top: 20rem;
     padding: 0 8%;
   }
 }
