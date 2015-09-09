@@ -1,68 +1,84 @@
-.wrap {
+$width: 200px;
+
+.o-cube {
+	display: none;
+
 	perspective: 100em;
+	perspective-origin: 50% -30em;
 	perspective-origin: 50% -40vw;
+
+	@media #{$medium-up} {
+		display: block;
+	}
 }
 
-.cube {
+.o-cube__main {
 	position: relative;
-	width: 200px;
+	width: $width;
 	transform-style: preserve-3d;
     top: 6em;
-    left: 4em;
-    transform: rotateY(30deg);
+    left: 2em;
+    transform: rotateY(30deg) scale(.7);
+	animation: cube-perspective 4s forwards 1s;
 }
 
-.cube * {
-    box-sizing: border-box;
-}
-
-.cube span {
+.o-cube__main span {
+  font-family: Georgia, serif;
   font-size: 15em;
   padding-left: .06em;
   line-height: .9;
   color: #fff;
-  text-shadow: -1px 0px 0 #ccc,
+  text-shadow: -1px 0 0 #ccc,
                -2px -1px 0 #ccc,
                -3px -2px 0 #ccc,
                -4px -3px 0 #ccc,
                -5px -4px 0 #ccc,
-               -6px -5px 0px #ccc,
-               -8px -7px 0px #ccc,
-               -9px -8px 0px #ccc,
-               -10px -9px 0px #ccc,
-               -11px -10px 0px #ccc,
-               -12px -11px 0px #ccc,
-               -13px -12px 0px #ccc,
+               -6px -5px 0 #ccc,
+               -8px -7px 0 #ccc,
+               -9px -8px 0 #ccc,
+               -10px -9px 0 #ccc,
+               -11px -10px 0 #ccc,
+               -12px -11px 0 #ccc,
+               -13px -12px 0 #ccc,
 }
 
-.cube div {
+.o-cube__side {
 	position: absolute;
-  border-radius: 10%;
-	width: 200px;
-	height: 200px;
-    box-shadow: 50px 50px 0px 1px rgba(0,0,0,.1);
+    border-radius: 10%;
+	width: $width;
+	height: $width;
+    box-shadow: 50px 50px 0 1px rgba(0,0,0,.1);
     border: 1px solid rgba(0,0,0,.1);
+	transition: all .4s ease-in-out;
+
+	&:hover {
+		box-shadow: -50px -50px 0 1px rgba(0,0,0,.2);
+	}
+
+	&:active {
+		transform: rotateY(-10deg);
+	}
 }
 
-.back {
+.o-cube__side--back {
 	transform: translateZ(-100px) rotateY(180deg);
 }
-.right {
+.o-cube__side--right {
 	transform: rotateY(-270deg) translateX(100px);
 	transform-origin: top right;
 }
-.left {
+.o-cube__side--left {
 	transform: rotateY(270deg) translateX(-100px);
 	transform-origin: center left;
 }
-.top {
+.o-cube__side--top {
 	transform: rotateX(-90deg) translateY(-100px);
 	transform-origin: top center;
 }
-.bottom {
+.o-cube__side--bottom {
 	transform: rotateX(90deg) translateY(100px);
 	transform-origin: bottom center;
 }
-.front {
+.o-cube__side--front {
 	transform: translateZ(100px);
 }

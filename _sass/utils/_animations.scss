@@ -5,7 +5,6 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -39,28 +38,19 @@
 .hvr-back-pulse {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
 }
 .hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
-  -webkit-animation-name: hvr-back-pulse;
   animation-name: hvr-back-pulse;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   color: #2098d1 !important;
 }
@@ -89,4 +79,14 @@
 @keyframes anim-elem-rev {
   0% { opacity: 1; transform: translate3d(0, 0, 0); }
   100% { opacity: 0;  transform: translate3d(0, 25px, 0); }
+}
+
+@keyframes cube-perspective {
+	from {
+		transform: rotateY(39deg) scale(.7);
+	}
+
+	to {
+		transform: rotateY(30deg) scale(.7);
+	}
 }

@@ -2,7 +2,7 @@
 title:       Ricardo Magalhães
 email:       magalhini@gmail.com
 author:      Ricardo Magalhães
-description: "The personal and work life blog of Ricardo Magalhães"
+description: "The personal and work-life blog of Ricardo Magalhães"
 baseurl:     ""
 url:         "https://magalhini.github.io"
 highlighter: pygments
@@ -12,7 +12,6 @@ timezone: Europe/Berlin
 google_analytics:
 
 # Optional features
-animated:           true
 show_related_posts: true
 show_post_footers:  false
 show_social_icons:  false
