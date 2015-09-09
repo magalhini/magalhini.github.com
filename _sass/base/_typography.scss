@@ -39,7 +39,7 @@ h5 {
 
 h1 {
   font-size: 2.157em;
-  
+
   @media #{$medium-up} {
     font-size: 3.157em;
   }
@@ -78,6 +78,7 @@ h5,
 
 small {
   font-size: 0.75em;
+  font-style: italic;
 }
 
 .highlight {
