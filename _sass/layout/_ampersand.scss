@@ -7,7 +7,7 @@ $width: 200px;
 	perspective-origin: 50% -30em;
 	perspective-origin: 50% -40vw;
 
-	@media #{$medium-up} {
+	@media #{$large-up} {
 		display: block;
 	}
 }
@@ -16,8 +16,8 @@ $width: 200px;
 	position: relative;
 	width: $width;
 	transform-style: preserve-3d;
-    top: 6em;
-    left: 2em;
+    top: 3em;
+	left: -1em;
     transform: rotateY(39deg) scale(.7);
 	animation: cube-perspective 4s forwards 1s;
 }
@@ -44,19 +44,12 @@ $width: 200px;
 
 .o-cube__side {
 	position: absolute;
-    border-radius: 10%;
 	width: $width;
 	height: $width;
-    box-shadow: 50px 50px 0 1px rgba(0,0,0,.1);
-    border: 1px solid rgba(0,0,0,.1);
 	transition: all .4s ease-in-out;
 
 	&:hover {
-		box-shadow: -50px -50px 0 1px rgba(0,0,0,.2);
-	}
-
-	&:active {
-		transform: rotateY(-10deg);
+		transform: translateZ(80px) rotateX(-5deg);
 	}
 }
 

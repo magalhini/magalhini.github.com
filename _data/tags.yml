@@ -10,3 +10,5 @@
   name: Life
 - slug: sass
   name: Sass
+- slug: git
+  name: Git
