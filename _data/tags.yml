@@ -12,3 +12,5 @@
   name: Sass
 - slug: git
   name: Git
+- slug: functional
+  name: Functional Programming
