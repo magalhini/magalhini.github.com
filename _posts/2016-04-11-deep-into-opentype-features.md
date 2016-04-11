@@ -43,7 +43,7 @@ If using Typekit, the features for each typefaces can be seen by clicking the `(
 
 #### What if I want to include/create my own?
 
-You can create and manage your own, yes! I won't go deep into this topic since it's not its scope, but you can make use of [Font Squirrel's Generator](https://www.fontsquirrel.com/tools/webfont-generator) to upload your typefaces and select exactly which features you want it to contain. If you go into **Expert Mode**, this is what you'll see:
+You can create and manage your own, yes! I won't go deep into this topic since it's not the article's scope, but you can make use of [Font Squirrel's Generator](https://www.fontsquirrel.com/tools/webfont-generator) to upload your typefaces and select exactly which features you want it to contain. If you go into **Expert Mode**, this is what you'll see:
 
 ![Font Squirrel Generator](https://cldup.com/NNewcHQyWr-2000x2000.png)
 
@@ -61,7 +61,7 @@ It makes me cringe a bit to try and make sense of the specification. We'll find 
 }
 {% endhighlight %}
 
-`font-variant-*` acts like a shorthand for the OpenType sub-properties, while `font-feature-settings` acts like a single rule containing a list of the sub-properties we want to enable.
+`font-variant-*` acts like a more specific rule for the individual OpenType sub-properties, while `font-feature-settings` behaves like a single rule, containing a list of the sub-properties we want to enable.
 
 These two properties, refer to **high-level** and **low-level** syntax. They can inherit from each other, but not all rules or browsers can do so elegantly, hence why their usage can be tricky to get right.
 
@@ -92,9 +92,9 @@ And the result:
 
 ![onum example](https://cldup.com/qxtr31k-Jg.gif)
 
-### So which syntax to use?
+### So which syntax to use...?
 
-The specification recommends using the high-level syntax, but using it alone is not going to work very well at the time of writing. Ideally, a smart combination of both should be used, paying special attention to inheritance.
+The specification recommends using the high-level syntax, but using it by itself isn't going to work very well at the time of writing. Ideally, a combination of both should be used, paying special attention to inheritance.
 
 **Consider the following example:**
 
@@ -158,7 +158,7 @@ Defaults are also a bit of a concern, at least at the time of writing, for some 
 - ... but they can't actually be disabled in Safari either
 - There are still bugs rendering ligatures with older browser versions
 
-Another important thing to note is that Chrome, Safari and Firefox fully support the `text-rendering` property, which calculates kerning automagically. This is why some ligatures and kerning are enabled by default even if we don't do it manually: these browsers turn these features on on their own. This is not the case of Internet Explorer, and nope, not even Edge.
+Another important thing to note is that Chrome, Safari and Firefox fully support the `text-rendering` property, which calculates kerning *automagically*. This is why some ligatures and kerning are enabled by default even if we don't do it manually: these browsers turn these features on if they're available. This is not the case of Internet Explorer, and nope, not even Edge.
 
 Here's the current state of support for `font-feature-*` right now (April 2016), provided by [caniuse](http://caniuse.com):
 
@@ -168,19 +168,21 @@ On the plus side, the recent `iOS 9.3 Safari` finally supports OpenType features
 
 ### Your content may need a revisit
 
-Another thing to take into account is that we shouldn't just blindly apply all the features to previous content and expect everything to look beautiful.
+Another thing to take into account is that we shouldn't just blindly apply all the features to our existing content and expect everything to look just right.
 
 There's usually a golden rule for capitalised content in content: NEVER TO WRITE IN CAPITALS IN YOUR MARKUP, even if it's meant to be displayed in capital letters. Instead, write as you normally would and style that particular piece using `text-transform: uppercase;`.
 
-Sensible, right? But if we're making the switch from fake small capitals to true small capitals (and we should, by the way, very rarely faux small capitals are a good idea), consider the following:
+Sensible, right? However, if we're making the switch from fake small capitals to true small capitals (and we should, by the way, very rarely *faux* small capitals are a good idea), consider the following:
 
 #### Small Capitals (smcp) vs. Capitals 2 Small Caps (c2cp)
 
-`smcp` and `c2sc` are not the same thing. The former will convert all text into small capitalised letters, *whether they are originally written in capitals or not.* The latter only applies small capitals to content that *is already* written in capitals, **or given the property of `uppercase` to begin with.**
+`smcp` and `c2sc` are not the same thing. The former will convert all text into small capitalised letters, *whether they are originally written in capitals or not.* The latter only applies small capitals to content that *is already* written in capitals, **or given the property of `text-transform: uppercase` to begin with.**
 
 #### Final Considerations
 
-Given the performance hit that enabling Open Type features by default can have, it's up to us to be responsible about its usage. How responsible? Well, a good example would be to enable these features so we can **use only one typeface instead of two**, for example, in our designs. Some typefaces become so versatile that you can definitely get away with a distinct, beautiful typographic design by using a single typeface.
+Given the performance hit that enabling Open Type features by default can have, it's up to us to be responsible about its usage. How responsible? Well, a good example would be to enable these features so we can **use only one typeface instead of two**, for example, in our designs. Some typefaces become so versatile that you can definitely get away with a distinct, beautiful typographic design by using a single typeface. So maybe you don't need that extra font file for a headline, you can use small caps (`smcp`) instead...?
+
+Features like proportional numbers (`pnum`), scientific inferiors (`sinf`) and even fractions (`frac`) make wonders for reading tabular data and they should be used whenever available. 
 
 Since the properties' specification is still evolving, it's a good idea to keep a close eye on it. Luckily, projects like [Utility Open Type](http://utility-opentype.kennethormandy.com/) are doing a great job at keeping track of the changes and offering us an easier way to use them.
 
