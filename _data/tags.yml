@@ -14,3 +14,9 @@
   name: Git
 - slug: functional
   name: Functional Programming
+- slug: typography
+  name: Typography
+- slug: fonts
+  name: Fonts
+- slug: css
+  name: CSS

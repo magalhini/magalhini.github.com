@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "uglifyjs-watcher minify.json & jekyll serve",
-    "start-dev": "uglifyjs-watcher minify.json & jekyll serve --baseurl",
+    "dev": "uglifyjs-watcher minify.json & jekyll serve --baseurl",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
