@@ -243,7 +243,7 @@ The HTML markup is very simple:
 
         <!-- include the client socket library-->
         <script src="/socket.io/socket.io.js"></script>
-        
+
         <script src="./client.js"></script>
     </body>
 </html>
@@ -309,6 +309,8 @@ If you don't, make sure to check your code against [the repository](https://gith
 What really excites me about this are the endless possibilities of where to take it from here. Sure we're directly manipulating the values for the LED, but we could very well be changing them based on a weather API, a Twitter account, Facebook messages, you name it.
 
 In fact, most of this code is already re-usable. Once you fetch the data you want to use, broadcast it to your board, and decide how you want to externalise this data. Maybe using sound, maybe using an LCD? The Amazon's sensors department is your limit.
+
+*Big shout out to the awesome people from the [Reactive Podcast](http://reactive.audio/), especially Raquel who's an inspiring nodebots envangelist™, for talking so often about getting into hardware programming that eventually convinced me to just get started. Go listen to their podcast!*
 
 ## More resources
 
