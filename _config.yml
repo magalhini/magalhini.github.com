@@ -49,3 +49,4 @@ sass:
   style: compressed
 gems:
   - octopress-autoprefixer
+  - jekyll-paginate

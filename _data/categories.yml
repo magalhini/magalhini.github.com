@@ -6,3 +6,5 @@
   name: Worklife
 - slug: general
   name: General
+- slug: arduino
+  name: Arduino

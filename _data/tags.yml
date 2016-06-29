@@ -20,3 +20,5 @@
   name: Fonts
 - slug: css
   name: CSS
+- slug: arduino
+  name: Arduino

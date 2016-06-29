@@ -7,7 +7,8 @@
     "uglify-js": "^2.4.24"
   },
   "devDependencies": {
-    "uglify-js": "^2.4.24"
+    "uglify-js": "^2.4.24",
+    "uglifyjs-watcher": "0.0.2"
   },
   "scripts": {
     "start": "uglifyjs-watcher minify.json & jekyll serve",
