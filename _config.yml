@@ -7,6 +7,7 @@ baseurl:     ""
 url:         "https://magalhini.github.io"
 highlighter: pygments
 timezone: Europe/Berlin
+future: true
 
 # Google analytics
 google_analytics:
