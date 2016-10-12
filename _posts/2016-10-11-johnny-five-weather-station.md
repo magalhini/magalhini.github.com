@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      Writing a weather station using Arduino and web sockets
-date:       2016-10-10 12:31:19
-summary:    A tutorial on how to creating a real-time, searchable weather station using Arduino, johnny-five and web sockets
+title:      Making a weather station using Arduino and web sockets
+date:       2016-10-11 12:31:19
+summary:    A tutorial on how to make a real-time, searchable weather station using Arduino, johnny-five and web sockets
 tags: [arduino, development]
 categories: development, arduino
 ---
 
-*A while ago, I wrote about how to get started with johnny-five for Arduino, a JavaScript/node.js library that can be used as a friendlier hardware interface than C. If you need to get started with the library, you can read in that post how to set johnny-five up or you can follow its very simple instructions on their website.*
+*A while ago, I wrote about how to get started with johnny-five for Arduino, a JavaScript/node.js library that can be used as a friendlier hardware interface than C. If you need to get started with the library, you can [read in that post](http://blog.ricardofilipe.com/post/getting-started-arduino-johhny-five) how to set johnny-five up or you can follow its very simple instructions on their website.*
 
 This little project sort of builds upon the last one, perhaps making a more extensive usage of the Web rather than the hardware/Arduino bits themselves. In fact, hardware-wise, this project is incredibly simple (which was not the point, but it's something I failed to notice initially).
 
@@ -36,6 +36,8 @@ Here's the schematic. It's pretty straightforward; our servo is connected to the
 
 ![](https://cldup.com/VOMR8CYy-s.png)
 
+If you're wondering about the capacitor, [here's why](http://electronics.stackexchange.com/questions/175431/using-a-capacitor-to-properly-power-a-servo).
+
 ### OpenWeather API
 
 In order to use OpenWeather's API, we need an API key to use, otherwise we won't have access to it. To get one, follow the [instructions on their API page](https://openweathermap.org/appid#get); after signing up, head other to their `/api_keys` section and generate one. It should look something like the following (note that the following key is invalid, though):
@@ -48,7 +50,7 @@ That's it for the API. Save it, we'll be using it in our main `index.js` file as
 
 ### The setup
 
-You can find the [full code on Github](TEMP), but here's a quick breakdown of what's happening.
+You can find the [full code on Github](https://github.com/magalhini/arduino-projects/tree/master/weather-station), but here's a quick breakdown of what's happening.
 
 In order to simplify the logic, everything is written in chainable form using `Promises`. Just by reading the function names that make up the whole demo, even without having written them, it's pretty easy to see what we're trying to achieve:
 
@@ -69,11 +71,11 @@ We want all of those methods to run once johnny-five is running **and** the web 
 {% highlight javascript %}
 
 five.Board().on('ready', function() {
-  // Servo is connected to port 9
-  servo = new five.Servo(9);
+  // Servo is connected to port 11
+  servo = new five.Servo(11);
 
   // These are the ports we're using for the LEDs
-  leds = new five.Leds([11,8,7,6,5,4,3]);
+  leds = new five.Leds([9,8,7,6,5,4,3]);
 
   // Setting up the listeners for our web socket events.
   io.on('connection', (client) => {
@@ -114,11 +116,11 @@ function getForecast(place) {
 }
 {% endhighlight %}
 
-By itself, `fetch` returns the data wrapped in a Promise, so we'll resolve it using the data we fetched.
+By itself, `fetch` returns the data wrapped in a Promise, so we'll resolve it using the data we fetched. If the request fails, we'll `reject` the Promise with the error.
 
 #### Moving the servo
 
-The servo motor is surprisingly simple to use using johnny-five and I highly encourage you to look at [its API on the source documentation](TEMP). There's tons of methods you can use to make it move, but at its core, it's as simple as telling it to move between an angle of `0` and `180` degrees, and providing an optional speed argument in milliseconds:
+The servo motor is surprisingly simple to use using johnny-five and I highly encourage you to look at [its API on the source documentation](http://johnny-five.io/examples/servo/). There's tons of methods you can use to make it move, but at its core, it's as simple as telling it to move between an angle of `0` and `180` degrees, and providing an optional speed argument in milliseconds:
 
 `servo.to(angle, speed)`
 
@@ -179,12 +181,13 @@ And point your browser to `http://localhost:3000`. If you download the other fil
 
 We need some markup (and CSS, why not) and JS to allow the user to search for a location, send it over to our local server using web sockets, and get things moving (literally).
 
-If you take a peek at the [https://github.com/magalhini/arduino-projects/blob/master/weather-station/index.html](index.html) file on the repo, you'll find all the markup and a simple JavaScript method:
+If you take a peek at the [index.html](https://github.com/magalhini/arduino-projects/blob/master/weather-station/index.html) file on the repo, you'll find all the markup and this simple JavaScript method:
 
 {% highlight javascript %}
 
 <script>
   (function() {
+    // connect to our socket connection on the server
     var socket = io.connect(window.location.hostname + ':' + 3000);
     var input = document.querySelector('input');
 
@@ -208,6 +211,6 @@ In the first line, we establish our connection to `socket.io`. On each `input` c
 
 #### Tweaking
 
-If you decide to try this out, the only thing you'll need to tweak are the angle values for your marker distribution. Get creative, hopefully more creative than I did, because that's precisely the point of messing around with an Arduino! For this project, I focussed too much on the Web part and not so much on learning more about the hardware, which is something I'll certainly work on for the next project.
+If you decide to try this out, the only thing you'll need to tweak are the **angle values for your marker distribution**. Get creative, hopefully more creative than I did, because that's precisely the point of messing around with an Arduino! For this project, I focussed too much on the Web part and not so much on learning more about the hardware, which is something I'll certainly work on for the next project.
 
 If you got any questions or doubts, feel free to ping me on [Twitter](http://twitter.com/magalhini).
