@@ -39,6 +39,12 @@ share_tumblr: false
 share_reddit: true
 share_hackernews: true
 
+assets:
+
+sources:
+    - _assets
+    - _assets/fonts
+
 # Build settings
 markdown:     kramdown
 redcarpet:
@@ -51,3 +57,4 @@ sass:
 gems:
   - octopress-autoprefixer
   - jekyll-paginate
+  - jekyll-assets
