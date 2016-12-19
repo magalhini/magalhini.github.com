@@ -10,14 +10,14 @@ categories: development
 ##### And a little Christmas project.
 
 <div class="post__intro">
-Hey! This article and project was written specifically for the wonderful <a href="http://web.advent.today">Web Advent Calendar 2016</a> of the very talented @kosamari. Make sure not to miss the rest of the other posts.
+Hey! This article and project was written specifically for the wonderful <a href="http://web.advent.today">Web Advent Calendar 2016</a> of <a href="https://twitter.com/kosamari">@kosamari</a>. Make sure not to miss the other selected articles!
 </div>
 
 One of my very few regrets in my *professional life* is not having started sooner tinkering with electronics and physical hardware.
 
-Granted, I was always put off by the fact that I "don't know a single thing about electronics". As a front-end developer who didn't even have an engineering background in University, the physical world of wires, LEDs, capacitors and other strange words has put me off from this side of development until about a year ago.
+Granted, I was always put off by the fact that "_I don't know a single thing about electronics_". As a front-end developer who didn't even have an engineering background in University, the physical world of wires, LEDs, capacitors and other strange words has put me off from this side of development until about a year ago.
 
-However, despite still fumbling for help and instructions on how to wire electronic components together, here's something I've made in a day:
+However, despite still fumbling for help and instructions on how to wire electronic components together, here's something I've made in a day. [This page,](http://therapeutic-appliance.surge.sh/) controls the following:
 
 <iframe width="590" height="345" src="https://www.youtube.com/embed/H3JkoRcEhp8" frameborder="0" allowfullscreen></iframe>
 
@@ -61,7 +61,7 @@ Writing your hardware applications in JavaScript is remarkably simple and it onl
 
 ![christmas house picture](https://cldup.com/-HDPMfZ28x.JPG)
 
-I present you: **[Come on baby, light my house](http://therapeutic-appliance.surge.sh/)!** A dead simple project which lets anyone on the Internet to control the colour of my little house on my desk, as well as playing an incredibly annoying music song on request:
+I present you: **[Come on baby, light my house](http://therapeutic-appliance.surge.sh/)**, a project which lets anyone on the Internet control the colour of the little house on my desk, as well as playing an incredibly annoying music song on request:
 
 The setup for this is extremely simple. Here's a breakdown, or you can have a look at the entire source code on [Github](https://github.com/magalhini/code-from-the-blog/tree/master/xmas-thing):
 
@@ -116,9 +116,9 @@ Blink an LED when someone [retweets you on Twitter?](https://dev.twitter.com/res
 
 Oh, I know... how about a small [simple robot that you can control](https://bocoup.com/weblog/controlling-the-robotsconf-sumobot-with-arduino-uno-johnny-five)?
 
-Or use it as input: There are physical buttons to use with an Arduino, so you could even use it as a source of input. Hell, someone [built an Arduino project that force deletes all of their emails on the push of a button](https://github.com/steveszc/inbox0) — how's that for a hard inbox zero?
+Or use it as input: There are physical buttons to use with an Arduino, so you could even use it as a source of input. Hell, someone [built an Arduino project that force deletes all of their emails on the push of a button](https://github.com/steveszc/inbox0)
 
-**The possibilities are endless**. And you'll simply have so much fun because you don't need to configure Webpack 45 times during your project.
+**The possibilities are endless**. And you'll have so much fun because you don't need to configure Webpack 45 times during your project.
 
 ### How do I get started?
 
@@ -132,7 +132,7 @@ Here's the best ones, in my opinion:
 
 > Starter kits are the best way to reduce the initial friction of getting started.
 
-These kits will already include projects you can follow along. Most of them will be in C language, but the hardware schematics will be 100% the same. It's actually quite fun to try to re-interpret the instructions from C into JavaScript, but you don't have to. I still follow along my kit instructions in C because sometimes I like to do it the "hardcore" way.
+These kits will already include projects you can follow along. Most of them will be written in C, but the hardware schematics will be 100% the same. It's actually quite fun to try to re-interpret the instructions from C into JavaScript, but you don't have to. I still follow along my kit instructions in C because sometimes I like to do it the "hardcore" way.
 
 ### Exercises to get started
 
