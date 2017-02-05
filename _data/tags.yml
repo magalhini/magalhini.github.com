@@ -7,6 +7,8 @@
 - slug: react
   name: React
 - slug: life
+- slug: node
+  name: Node
   name: Life
 - slug: sass
   name: Sass
