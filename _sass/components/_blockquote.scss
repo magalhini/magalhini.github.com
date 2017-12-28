@@ -1,5 +1,11 @@
-blockquote {
+.blockquote {
+  display: block;
+  padding-left: 2em;
+  border-left: 5px solid #333;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
 
+blockquote {
   font-style: italic;
   margin: 3rem 0;
   text-align: center;
