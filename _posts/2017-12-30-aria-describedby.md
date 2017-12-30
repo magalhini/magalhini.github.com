@@ -1,34 +1,36 @@
 ---
 layout:     post
-title:      How to use ARIA describedby and labelledby
+title:      Accessibility with aria-describedby and aria-labelledby
 date:       2017-12-30 12:31:19
-summary:    A very clean and efficient pattern for rendering conditional components in React.
+summary:    When, and how, to use aria-describedby and aria-labelledby to significantly improve the a11y of your pages.
 tags: [development]
 categories: development
 ---
 
-So many web developers stay away from doing accessibility right because they're afraid of causing more harm than good. I get that, as I had that fear myself in the past, when worrying about a11y was, shamefully, something I _could_ dismiss at first. However, now that I'm at Shopify and a11y is a non-negotiable, I'm learning that there is absolutely no excuse to at least not do the very basics right.
+As web developers, we sometimes stay away from doing accessibility right because we're afraid of causing more harm than good. I had that fear myself, when worrying about a11y was, shamefully, something I _could_ dismiss at first. However, at Shopify, a11y is a non-negotiable, and I'm learning that there is absolutely no excuse to at least not do the very basics right.
 
-One of the most common questions I see developers having is about some ARIA attributes, namely when to use `aria-labelledby` and `aria-describedby`. So today, I'd like to share some quicks tips on how you can and should start including these very key attributes in your HTML semantics right now.
+One of the most common questions I see people having is about some ARIA attributes, namely when to use `aria-labelledby` and `aria-describedby`. So today, I'd like to share some quicks tips on how you can and should start including these key attributes in your HTML semantics right now.
+
+_tl;dr: they make a world of a difference for non-sighted users._
 
 ## aria-labelledby
 
-As the name implies, "labelled by", this attribute receives the IDs of elements which establish a relationship between the elements. Unlike the `label` elements, which we should always use to name the elements, `labelledby` gives extended information that help make sense of what the element is.
+As the name implies, "labelled by", this attribute receives the IDs of elements which establish a relationship between the elements. Unlike the `label` elements, which we should always use to name the elements, `labelledby` gives extended information that helps make sense of what the element is.
 
-To understand this better, keep this in mind: the `aria-labelledby` attribute is read by a screenreader after saying out loud the field type.
+To understand this better, remember this: the `aria-labelledby` attribute is read by a screenreader after it says out loud the field type.
 An example of when you'd want to use this is labeling choices, which are labeled by a previously appearing title:
 
 {% highlight html %}
 <h3 id="lunch_label">Café Options</h3>
 
-<ul aria-labelledby="lunch_label" id="coffee-radio" role="radiogroup">
-  <li id="o1">Macchiato</li>
-  <li id="o2">Cappuccino</li>
-  <li id="o3">Latte</li>
+<ul aria-labelledby="lunch_label" role="radiogroup">
+  <li id="o1">Macchiato</li>...
+  <li id="o2">Cappuccino</li>...
+  <li id="o3">Latte</li>...
 </ul>
 {% endhighlight %}
 
-As you noticed, we're using `labelledby` to refer to the previous `h3` element. **It always expects an ID string**.
+Notice we're using `labelledby` to refer to the previous `h3` element. **It always expects an ID string**, which can be more than 1.
 
 **Another example, with multiple labels:**
 
@@ -45,7 +47,7 @@ As you noticed, we're using `labelledby` to refer to the previous `h3` element. 
 </div>
 {% endhighlight %}
 
-_(This example was taken straight out of <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">MDN web docs for this attribute</a>)._
+_(This example was taken out of <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">MDN web docs for this attribute</a>)._
 
 The main takeaway from this previous example is the fact we're passing in two identifiers: `billing` and `name`. This tells the screenreader that the inputs are part of a subsection within a section; in this case, the `name` input is labelled by the text _Name:_ and its section, _Billing._
 
@@ -56,7 +58,7 @@ You're displaying 4 images of full stars, and 1 image of an empty star. To sight
 
 ★★★★☆
 
-There are several ways to approach this problem, and all will depend on how much control you have over your own system. But an easy way to provide a text representation of the rating is to use `aria-labelledby` to point to an element ID which has a written value for the rating. Consider this:
+There are many different ways to approach this problem, and all will depend on how much control you have over your own system. But an easy way to provide a text representation of the rating is to use `aria-labelledby` to point to an element ID which has a written value for the rating. Consider this:
 
 {% highlight html %}
 <span id="star-rating" class="visually-hidden">Rating: 4 of 5</span>
@@ -115,7 +117,11 @@ There's a few things to note when using any of these ARIA techniques. When we're
 
 It should never replace the use of `label` elements in forms. Consider it for the situations when you need multiple labels.
 
-- aria-labelledby: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
+### More resources
+
+1. [MDN aria-labelledby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+2. [MDN aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)
+
 ___
 
 Anything I might have overlooked or gotten wrong? Don't be afraid to ping me on [Twitter](http://twitter.com/magalhini).
